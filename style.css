@@ -113,22 +113,26 @@ header {
     width: 100%;
     height: 80vh;
     display: grid;
+    row-gap: 0.5rem; 
+    column-gap: 0.5rem;
     grid-template-columns: repeat(2,1fr);
     align-items: center;
     gap: 2em;
 }
 
 #sobremi .imagen-sobremi{
-    width: 50%;
-
+    grid-column: 1 / 2;
+    grid-row: 1;
 }
 
 #sobremi .contenido-sobremi{
-    width: 50%;
+    grid-column: 2 / 3;
+    grid-row: 1;
 }
 
 #sobremi img{
     border:  7px solid aqua;
+    border-radius: 30px;
     width: 450px;
     height: 520px;
     z-index: 1;
