@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@100&display=swap');
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    background-color: #191c32 ;
+    color: #fff;
+}
+
+header {
+    width: 100%;
+    top: 0;
+    background-color: #191c32 ;
+    position: fixed;
+}
+
+.item{
+    scroll-margin-top: 10ex;
+}
+.wrapper{
+    background-color: #191c32;
+    color: #fff;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 2em;
+}
+
+.brand{
+    margin-top: -7px;
+}
+
+.menu{
+    display: flex;
+    width: 60%;
+    justify-content: space-around;
+}
+
+.brand span{
+    color: aqua;
+}
+
+.menu li {
+    list-style: none;
+}
+.menu a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+.menu .active {
+    color: aqua;
+}
+
+.menu a:hover {
+    background-color: aqua;
+    color: #191c32;
+    transition: ease-in .4s;
+}
+
+#inicio{
+    width: 600px;
+    height: 690px;
+    margin:0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#inicio h1{
+    font-size: 80px;
+    display:block;
+    white-space: nowrap;
+    border-right: 4px solid;
+    width: 15ch;
+
+    animation:typing 2s steps(15), blink .5s infinite step-end alternate;
+    overflow: hidden;
+}
+#inicio h2{
+    font-size: 25px;
+}
+#inicio h3{
+    font-size: 16px;
+}
+
+@keyframes typing {
+    from { width: 0}
+}
+@keyframes blink {
+    50% {border-color: transparent;}
+}
+
+
+#inicio h1 span{
+    color: aqua;
+}
+
+#sobremi {
+    width: 100%;
+    height: 80vh;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    gap: 2em;
+}
+
+#sobremi .imagen-sobremi{
+    width: 50%;
+
+}
+
+#sobremi .contenido-sobremi{
+    width: 50%;
+}
+
+#sobremi img{
+    border:  7px solid aqua;
+    width: 450px;
+    height: 520px;
+    z-index: 1;
+}
+
+.main{
+    margin: 0 auto;
+    width: 80vw;
+    height: 80vh;
+    display: grid;
+    align-items: center;
+}
