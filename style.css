@@ -165,6 +165,7 @@ header {
 #sobremi {
     width: 100%;
     height: 100%;
+    min-height: 100vh;
     display: flex;
     flex-flow:row wrap;
     row-gap: 0.5rem; 
@@ -218,7 +219,8 @@ header {
 
 #educacion {
     width: 100%;
-    height: 900px;
+    height: 100%;
+    min-height: 100vh;
     display: flex;
     flex-flow:row wrap;
     row-gap: 0.5rem;
@@ -245,6 +247,7 @@ header {
     padding: 10px;
     width: 100%;
     height: 100%;
+    min-height: 100vh;
     align-items: center;
 }
 
@@ -278,9 +281,9 @@ header {
 #footeritem{
     width: 100%;
     height: 100%;
-    display: flex;
+    display: block;
     flex-flow: row wrap;
-    background-color: red;
+
 }
 footer{
     width: 100%;
@@ -376,8 +379,10 @@ footer ul li:nth-child(3) a:before {
 
 
 #nacionalidad {
+
     width: 100%;
     height: 100%;
+    min-height: 100vh;
     display: flex;
     flex-flow:column wrap;
     row-gap: 0.5rem;
@@ -408,12 +413,98 @@ footer ul li:nth-child(3) a:before {
     height:315px;
 }
 #contactame{
-        width: 100%;
-        height: 1000px;
-        display: flex;
-        flex-flow:column wrap;
-        row-gap: 0.5rem;
-        column-gap: 0.5rem;
-        justify-content: center;
-        align-items: center;
+    background-image: url(recursos/contact_bg.png);
+    background-color: #191c32;
+    padding: 50px 0;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    display: flex;
+}
+.contenido-seccion{
+    display: flex;
+    flex-flow:row wrap;
+}
+
+#formulario .form-group{
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+
+.contenido-seccion{
+    max-width: 1000px;
+    margin: auto;
+    row-gap: 0.5rem; 
+    justify-content: center;
+    align-items: center;
+
+}
+.contenido-seccion #contacto,.contenido-seccion #formulario{
+    width: 450px;
+    height: 646px;
+}
+.contenido-seccion #contacto{
+    width: 100%;
+
+
+}
+.contenido-seccion p {
+    width: 500px;
+    margin: auto;
+}
+#contactame #contacto{
+    width: 50%;
+    padding: 10px;
+    position: relative;
+    align-items: center;
+}
+#contactame #formulario{
+    width: 50%;
+}
+#contactame #formulario .form-group{
+    width: 450px;
+    
+}
+.contenido-seccion #formulario input, .contenido-seccion #formulario textarea{
+    display: block;
+    width: 100%;
+    padding: 18px;
+    border: none;
+    margin-bottom: 20px;
+    background-color: #252A2E;
+    color: #fff;
+    font-size: 18px;
+}
+.contenido-seccion button{
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid #fff;
+    width: fit-content;
+    display: block;
+    margin: 20px auto;
+    padding: 10px 22px;
+    font-size: 16px;
+    color: #fff;
+    position: relative;
+    z-index: 10;
+}
+button .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #1CB698;
+    z-index: -1;
+    transition: 1s;
+}
+.contenido-seccion button:hover .overlay{
+    width: 100%;
+}
+
+@media (max-width:1010px){
+    .contenido-seccion{
+        flex-flow: column wrap;
+    }
 }
